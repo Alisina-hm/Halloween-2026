@@ -1,0 +1,283 @@
+@import "tailwindcss";
+
+@theme {
+  --font-spooky: "Creepster", cursive;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+/* افکت مترسک برای موبایل و تبلت */
+#more-details {
+  position: relative;
+  isolation: isolate;
+}
+
+/* هاله قرمز پشت مترسک */
+#more-details::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+
+  width: 65%;
+  aspect-ratio: 1;
+  top: 8%;
+  left: 50%;
+
+  transform: translateX(-50%) scale(0.8);
+  border-radius: 50%;
+  background: #ff202e;
+  filter: blur(55px);
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+/* خود تصویر مترسک */
+#more-details .scarecrow {
+  position: relative;
+  z-index: 1;
+  transform-origin: center 75%;
+  filter: drop-shadow(0 0 0 transparent);
+}
+
+/* اجرای افکت */
+#more-details.active .scarecrow {
+  animation: scarecrow-mobile 2s ease-in-out forwards;
+}
+
+#more-details.active::before {
+  animation: halloween-aura-mobile 2s ease-in-out forwards;
+}
+
+/* لرزش، بزرگ شدن و برگشت */
+@keyframes scarecrow-mobile {
+  0% {
+    transform: scale(1) rotate(0);
+    filter: drop-shadow(0 0 0 transparent);
+  }
+
+  15% {
+    transform: scale(1.07) rotate(-2deg);
+    filter: drop-shadow(0 0 6px #ff2638) drop-shadow(0 0 15px #e50920);
+  }
+
+  30% {
+    transform: scale(1.1) rotate(2deg);
+    filter: drop-shadow(0 0 9px #ff2638) drop-shadow(0 0 23px #e50920);
+  }
+
+  50% {
+    transform: scale(1.07) rotate(-1.5deg);
+    filter: drop-shadow(0 0 8px #ff2638) drop-shadow(0 0 18px #e50920);
+  }
+
+  70% {
+    transform: scale(1.04) rotate(1deg);
+    filter: drop-shadow(0 0 10px #ff2638);
+  }
+
+  85% {
+    transform: scale(1.02) rotate(0);
+    filter: drop-shadow(0 0 6px #ff2638);
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+    filter: drop-shadow(0 0 0 transparent);
+  }
+}
+
+/* ظاهر شدن و محو شدن هاله */
+@keyframes halloween-aura-mobile {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.65);
+  }
+
+  25% {
+    opacity: 0.85;
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  55% {
+    opacity: 0.65;
+    transform: translateX(-50%) scale(1);
+  }
+
+  80% {
+    opacity: 0.3;
+    transform: translateX(-50%) scale(0.9);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8);
+  }
+}
+
+/* افکت اختصاصی دسکتاپ */
+@media (min-width: 1280px) {
+  #more-details {
+    position: relative;
+    isolation: isolate;
+  }
+
+  /* هاله قرمز پشت مترسک */
+  #more-details::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+
+    width: 65%;
+    aspect-ratio: 1;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+
+    border-radius: 50%;
+    background: #ff202e;
+    filter: blur(85px);
+    opacity: 0;
+
+    pointer-events: none;
+  }
+
+  /* خود کاراکتر */
+  #more-details .scarecrow {
+    position: relative;
+    z-index: 1;
+
+    transform-origin: center 75%;
+    filter: drop-shadow(0 0 0 transparent);
+  }
+
+  /* نور قرمز دور لبه‌های تصویر */
+  #more-details.active .scarecrow {
+    animation: scarecrow-desktop 2s ease-in-out forwards;
+  }
+
+  #more-details.active::before {
+    animation: halloween-aura 2s ease-in-out forwards;
+  }
+
+  /* لرزش، بزرگ شدن و برگشت به حالت عادی */
+  @keyframes scarecrow-desktop {
+    0% {
+      transform: scale(1) rotate(0);
+      filter: drop-shadow(0 0 0 transparent);
+    }
+
+    15% {
+      transform: scale(1.07) rotate(-2deg);
+      filter: drop-shadow(0 0 8px #ff2638) drop-shadow(0 0 22px #e50920);
+    }
+
+    30% {
+      transform: scale(1.1) rotate(2deg);
+      filter: drop-shadow(0 0 12px #ff2638) drop-shadow(0 0 32px #e50920);
+    }
+
+    50% {
+      transform: scale(1.07) rotate(-1.5deg);
+      filter: drop-shadow(0 0 10px #ff2638) drop-shadow(0 0 25px #e50920);
+    }
+
+    70% {
+      transform: scale(1.04) rotate(1deg);
+      filter: drop-shadow(0 0 14px #ff2638);
+    }
+
+    85% {
+      transform: scale(1.02) rotate(0);
+      filter: drop-shadow(0 0 8px #ff2638);
+    }
+
+    100% {
+      transform: scale(1) rotate(0);
+      filter: drop-shadow(0 0 0 transparent);
+    }
+  }
+
+  /* هاله قرمز پشت کاراکتر */
+  @keyframes halloween-aura {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) scale(0.65);
+    }
+
+    25% {
+      opacity: 0.85;
+      transform: translateX(-50%) scale(1.1);
+    }
+
+    55% {
+      opacity: 0.65;
+      transform: translateX(-50%) scale(1);
+    }
+
+    80% {
+      opacity: 0.3;
+      transform: translateX(-50%) scale(0.9);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(-50%) scale(0.8);
+    }
+  }
+}
+
+/* فقط عکس کدو */
+.pumpkin img {
+  transform: scale(1);
+  transform-origin: center bottom;
+}
+
+.pumpkin.active img {
+  animation: pumpkin-pop 0.85s ease-out forwards;
+  filter: drop-shadow(0 0 6px #c77dff) drop-shadow(0 0 14px #9333ea)
+    drop-shadow(0 0 22px #6b21a8);
+}
+
+@keyframes pumpkin-pop {
+  0% {
+    transform: scale(1);
+  }
+
+  65% {
+    transform: scale(1.1);
+    animation-timing-function: ease-in;
+  }
+
+  82% {
+    transform: scale(1.1);
+    animation-timing-function: cubic-bezier(0.2, 1.8, 0.4, 1);
+  }
+}
+
+/* فقط عکس اسکلت */
+.skeleton img {
+  transform: scale(1);
+  transform-origin: center bottom;
+}
+
+.skeleton.active img {
+  animation: skeleton-pop 0.85s ease-out forwards;
+  filter: drop-shadow(0 0 6px #a3ff70) drop-shadow(0 0 14px #65e61d)
+    drop-shadow(0 0 22px #36a800);
+}
+
+@keyframes skeleton-pop {
+  0% {
+    transform: scale(1);
+  }
+
+  65% {
+    transform: scale(1.1);
+    animation-timing-function: ease-in;
+  }
+
+  82% {
+    transform: scale(1.1);
+    animation-timing-function: cubic-bezier(0.2, 1.8, 0.4, 1);
+  }
+}

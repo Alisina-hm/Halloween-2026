@@ -3,6 +3,25 @@
 @theme {
   --font-spooky: "Creepster", cursive;
   --font-poppins: "Poppins", sans-serif;
+  --font-persian: "Vazirmatn", sans-serif;
+}
+
+.font-persian {
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+/* انیمیشن تغییر زبان */
+.language-transition {
+  opacity: 0;
+  transform: translateY(5px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.language-transition.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* افکت مترسک برای موبایل و تبلت */

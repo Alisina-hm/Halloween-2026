@@ -35,23 +35,38 @@
       href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="bg-[#0E1215]">
-    <header class="flex justify-between px-4 py-2 lg: flex items-center">
+    <header class="flex justify-between px-4 py-2 xl:flex items-center">
       <h4 class="text-[#F02F32] font-spooky text-[25px] xl:text-[40px]">
         Spookify
       </h4>
 
-      <div
-        class="bg-[#EB2731] rounded-[20px] gap-4 text-[#F8F8FA] flex items-center h-[92%] shadow-[0_4px_15px_#EB273140]"
-      >
-        <a
-          href="#contact-us"
-          class="px-3 xl:text-[25px]"
-          >Contact Us</a
+      <div class="flex flex-row items-center gap-2">
+        <div
+          class="bg-[#EB2731] rounded-[20px] gap-4 text-[#F8F8FA] flex items-center h-[92%] shadow-[0_4px_15px_#EB273140]"
         >
+          <a
+            href="#contact-us"
+            class="heder-Contact px-2 xl:text-[25px]"
+            >Contact Us</a
+          >
 
-        <i class="fa-solid fa-phone bg-[#323A40] rounded-[50%] p-2 xl:p-3"></i>
+          <i
+            class="fa-solid fa-phone bg-[#323A40] rounded-[50%] p-1.5 xl:p-3"
+          ></i>
+        </div>
+
+        <div
+          class="toggle-ln bg-[#D6590E] text-[#F6EBDE] rounded-[50%] px-1 py-0.5"
+        >
+          <p class="btn-toggle-ln">En</p>
+        </div>
       </div>
     </header>
     <hr class="text-[#222629]" />
@@ -61,13 +76,15 @@
         class="flex flex-col w-[90%] mx-auto mt-[20px] gap-[15px] xl:w-[80%] ml-0 ml-[20px] xl:col-start-1 xl:row-start-1"
       >
         <h2
-          class="font-spooky text-[#FCFCFC] text-[30px] leading-[32px] sm:text-[65px] sm:leading-[60px] xl:text-[78px] xl:leading-[80px]"
+          class="title-text font-spooky text-[#FCFCFC] text-[30px] leading-[32px] sm:text-[65px] sm:leading-[60px] xl:text-[78px] xl:leading-[80px]"
         >
           Transform Your Space <br />for
           <span class="text-[#EB2731]">Halloween!</span>
         </h2>
 
-        <p class="text-[#757980] font-poppins sm:text-[20px] xl:text-[22px]">
+        <p
+          class="p-title text-[#757980] font-poppins sm:text-[20px] xl:text-[22px]"
+        >
           Transform your space with spookify decor that thrills! From eerie
           accents to haunting centerpieces, find everything you need for thr
           perfect Halloween vibe.
@@ -81,12 +98,12 @@
               class="fa-solid fa-envelope bg-[#EB2731] p-3 rounded-[50%] sm:p-4"
             ></i>
 
-            <h4 class="px-3">Shop the Scare</h4>
+            <h4 class="Shop-btn px-3">Shop the Scare</h4>
           </div>
 
           <a
             href="#more-details"
-            class="text-[#D4D4D6] underline sm:text-[20px]"
+            class="Details-btn text-[#D4D4D6] underline sm:text-[20px]"
             >More Details</a
           >
         </div>
@@ -106,24 +123,34 @@
         <div
           class="grid grid-cols-3 grid-row-2 text-[#BEC3C7] gap-x-4 gap-y-3 w-[90%] mx-auto text-[10px] xl:w-[70%] xl:text-[12px]"
         >
-          <h4 class="border border-[#5D6164] px-4 py-1 rounded-[8px]">
+          <h4
+            class="Indoor-Decor border border-[#5D6164] px-4 py-1 rounded-[8px]"
+          >
             Indoor Decor
           </h4>
-          <h4 class="border border-[#5D6164] px-4 py-1 rounded-[8px]">
+          <h4
+            class="Edible-Treats border border-[#5D6164] px-4 py-1 rounded-[8px]"
+          >
             Edible Treats
           </h4>
           <h4
-            class="border border-[#5D6164] px-4 py-1 rounded-[8px] text-[10px] xl:text-[12px]"
+            class="Pumpkin-Decor border border-[#5D6164] px-4 py-1 rounded-[8px] text-[10px] xl:text-[12px]"
           >
             Pumpkin Decor
           </h4>
-          <h4 class="border border-[#5D6164] px-4 py-1 rounded-[8px]">
+          <h4
+            class="Outdoor-Decor border border-[#5D6164] px-4 py-1 rounded-[8px]"
+          >
             Outdoor Decor
           </h4>
-          <h4 class="border border-[#5D6164] px-4 py-1 rounded-[8px]">
+          <h4
+            class="Scary-Props border border-[#5D6164] px-4 py-1 rounded-[8px]"
+          >
             Scary Props
           </h4>
-          <h4 class="border border-[#5D6164] px-4 py-1 rounded-[8px]">
+          <h4
+            class="Accessories border border-[#5D6164] px-4 py-1 rounded-[8px]"
+          >
             Accessories
           </h4>
         </div>
@@ -183,18 +210,18 @@
 
             <div class="flex flex-col items-center xl:items-start">
               <p
-                class="font-poppins text-[#D95C00] mr-auto text-[15px] xl:text-[18px]"
+                class="ABOUT-THE-BUILDER font-poppins text-[#D95C00] mr-auto text-[15px] xl:text-[18px]"
               >
                 ABOUT THE BUILDER
               </p>
 
               <h2
-                class="font-spooky text-[#E0DFE5] mr-auto text-[30px] xl:text-[35px]"
+                class="BUILDER-name font-spooky text-[#E0DFE5] mr-auto text-[30px] xl:text-[35px]"
               >
                 Alisina
               </h2>
 
-              <p class="font-poppins text-[#787C85] text-[13px] xl:text-[18px]">
+              <p class="text-builder font-poppins text-[#787C85] text-[13px] xl:text-[18px]">
                 Hi I'm the creator of Spookify, a Halloween enthusiast and web
                 designer. I'm passionate about creating spookify and immersive
                 digital experiences that bring the Halloween spirit to life.
@@ -253,9 +280,11 @@
       >
         <div class="flex flex-col items-center">
           <div class="flex flex-col items-center mb-[10px]">
-            <h4 class="text-[20px] text-[#282828]">Connect us</h4>
+            <h4 class="Connect-footer text-[20px] text-[#282828]">
+              Connect us
+            </h4>
 
-            <p class="text-[15px] text-[#606263]">
+            <p class="footer-text text-[15px] text-[#606263]">
               FOLLOW US FOR SPOOKIFY UPDATES
             </p>
           </div>
@@ -310,7 +339,9 @@
             class="w-[200px]"
           />
 
-          <a class="absolute text-[#EFF4F7] top-[35%]">About Builder</a>
+          <a class="About-Builder-btn absolute text-[#EFF4F7] top-[35%]"
+            >About Builder</a
+          >
         </div>
       </div>
     </footer>
